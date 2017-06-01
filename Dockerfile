@@ -9,7 +9,7 @@ RUN apt install -y \
       gcc \
       make
 
-RUN gem install chef
+RUN gem install chef --version '~>12'
 
 ENTRYPOINT ["knife"]
 CMD ["--help"]

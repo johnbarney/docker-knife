@@ -1,6 +1,6 @@
 FROM ruby:slim
 
-RUN mkdir -p /knife/.chef
+RUN mkdir -p /knife
 WORKDIR /knife
 VOLUME /knife
 RUN apt update && apt upgrade -y

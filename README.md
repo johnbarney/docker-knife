@@ -2,7 +2,7 @@
 
 [Docker Hub](https://hub.docker.com/r/johnbarney/docker-knife/)
 
-This container is in response to not wanting a flood of gem sets or the omnibus installer packer installed on my CI system. It uses Docker which is already in use in my CI system to run knife in a container.
+This container is in response to not wanting a flood of gem sets or the omnibus installer package installed on my CI system. It uses Docker which is already in use in my CI system to run knife in a container.
 
 Example usage:
 

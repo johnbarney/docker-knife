@@ -9,7 +9,7 @@ RUN set -ex                                              \
     && apt upgrade -y                                    \
     && apt install -y --no-install-recommends $buildDeps \
     && rm -rf /var/lib/apt/lists/*                       \
-    && gem install chef                                  \
+    && gem install chef --version '~>12'                 \
     && apt purge -y --auto-remove $buildDeps
 
 ENTRYPOINT ["knife"]

@@ -7,15 +7,15 @@ cd ${BASE}/${VERSION}
 
 if [ $BASE == "ruby" ]; then
     if [ $VERSION == "latest" ]; then
-        DOCKER_TAG = latest
+        DOCKER_TAG=latest
     else
-        DOCKER_TAG = $VERSION
+        DOCKER_TAG=$VERSION
     fi
 else
     if [ $VERSION == "latest" ]; then
-        DOCKER_TAG = alpine
+        DOCKER_TAG=alpine
     else
-        DOCKER_TAG = ${VERSION}-${BASE}
+        DOCKER_TAG=${VERSION}-${BASE}
     fi
 fi
 

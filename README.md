@@ -1,4 +1,4 @@
-## docker-knife
+## docker-knife [![Build Status](https://travis-ci.org/johnbarney/docker-knife.svg?branch=master)](https://travis-ci.org/johnbarney/docker-knife)
 
 [Docker Hub](https://hub.docker.com/r/johnbarney/docker-knife/)
 

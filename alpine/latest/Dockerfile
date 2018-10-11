@@ -7,7 +7,7 @@ RUN set -ex                          \
     && buildDeps='build-base'        \
     && apk upgrade                   \
     && apk add --no-cache $buildDeps \
-    && gem install chef --version    \
+    && gem install chef              \
     && apk del $buildDeps
 
 ENTRYPOINT ["knife"]

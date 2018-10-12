@@ -1,6 +1,10 @@
 language: generic
 services: docker
 
+branches:
+  only:
+    - master
+
 env:
   - BASE=alpine VERSION=12
   - BASE=alpine VERSION=13
@@ -11,14 +15,5 @@ env:
   - BASE=ruby VERSION=14
   - BASE=ruby VERSION=latest
 
-jobs:
-  include:
-    - stage: Build
-      script: ./ci.sh build
-    - stage: Push
-      script: ./ci.sh push
-
-stages:
-  - Build
-  - name: Push
-    if: branch = master AND repo = johnbarney/docker-knife
+script:
+  - ./build.sh

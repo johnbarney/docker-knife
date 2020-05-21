@@ -4,11 +4,7 @@ DOCKER_IMAGE=${DOCKER_USERNAME}/docker-knife
 cd ${BASE}/${VERSION}
 
 if [ $BASE == "ruby" ]; then
-    if [ $VERSION == "latest" ]; then
-        DOCKER_TAG=latest
-    else
-        DOCKER_TAG=$VERSION
-    fi
+    DOCKER_TAG=$VERSION
 else
     if [ $VERSION == "latest" ]; then
         DOCKER_TAG=alpine

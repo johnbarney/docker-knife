@@ -13,9 +13,11 @@ else
     fi
 fi
 
+# DockerHub Login
+echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
 # Build container
 docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
 
 # Push container
-echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 docker push ${DOCKER_IMAGE}:${DOCKER_TAG}

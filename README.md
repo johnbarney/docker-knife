@@ -13,5 +13,7 @@ If you are in your chef-repo, this will mount your chef-repo as the working dire
 ## Change Log
 
 11-5-2021
+* Update Dockerfiles with tech I've learned since I first wrote them
+* Log into DockerHub before build to prevent pull rate limiting
 * Removed support for EOL knife versions (12-14)
 * Added support for Knife 17+

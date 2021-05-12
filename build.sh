@@ -26,10 +26,10 @@ else
 fi
 
 # DockerHub Login
-#echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 
 # Build container
-docker build --build-arg VERSION="${GEM_VERSION}" --build-arg GEM="${GEM}" -t "${DOCKER_IMAGE}":"${DOCKER_TAG}" .
+docker build --build-arg TAG=${TAG} --build-arg VERSION="${GEM_VERSION}" --build-arg GEM="${GEM}" -t "${DOCKER_IMAGE}":"${DOCKER_TAG}" .
 
 # Push container
-#docker push "${DOCKER_IMAGE}":"${DOCKER_TAG}"
+docker push "${DOCKER_IMAGE}":"${DOCKER_TAG}"

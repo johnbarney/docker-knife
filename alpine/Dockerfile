@@ -1,6 +1,7 @@
 FROM ruby:alpine
 
-ARG KNIFE_VERSION
+ARG VERSION
+ARG GEM
 ENV BUILDDEPS="build-base"
 
 RUN mkdir -p /knife
@@ -9,7 +10,7 @@ VOLUME /knife
 RUN set -ex                            \
  && apk upgrade                        \
  && apk add --no-cache ${BUILDDEPS}    \
- && gem install knife ${KNIFE_VERSION} \
+ && gem install ${GEM} ${VERSION} \
  && apk del ${BUILDDEPS}
 
 ENTRYPOINT ["knife"]

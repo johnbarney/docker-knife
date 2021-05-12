@@ -6,18 +6,15 @@ branches:
     - master
 
 env:
-  - BASE=alpine VERSION=12
-  - BASE=alpine VERSION=13
-  - BASE=alpine VERSION=14
   - BASE=alpine VERSION=15
   - BASE=alpine VERSION=16
+  - BASE=alpine VERSION=17
   - BASE=alpine VERSION=latest
-  - BASE=ruby VERSION=12
-  - BASE=ruby VERSION=13
-  - BASE=ruby VERSION=14
   - BASE=ruby VERSION=15
   - BASE=ruby VERSION=16
+  - BASE=ruby VERSION=17
   - BASE=ruby VERSION=latest
+
 
 script:
   - ./build.sh

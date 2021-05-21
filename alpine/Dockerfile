@@ -7,10 +7,10 @@ ENV BUILDDEPS="build-base"
 RUN mkdir -p /knife
 WORKDIR /knife
 VOLUME /knife
-RUN set -ex                            \
- && apk upgrade                        \
- && apk add --no-cache ${BUILDDEPS}    \
- && gem install ${GEM} ${VERSION} \
+RUN set -ex                         \
+ && apk upgrade                     \
+ && apk add --no-cache ${BUILDDEPS} \
+ && gem install ${GEM} ${VERSION}   \
  && apk del ${BUILDDEPS}
 
 ENTRYPOINT ["knife"]

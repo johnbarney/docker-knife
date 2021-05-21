@@ -5,7 +5,7 @@ GEM=knife
 
 cd "${BASE}"
 
-# Are we building Knife 17 or newer?
+# Are we building version 17 or newer?
 if [ "${VERSION}" != "latest" ]; then
   if [ "${VERSION}" -le 16 ]; then
     GEM=chef
@@ -14,7 +14,7 @@ else
   GEM_VERSION=""
 fi
 
-# Set tags
+# Set tag
 if [ "${BASE}" == "ruby" ]; then
   DOCKER_TAG="${VERSION}"
 else

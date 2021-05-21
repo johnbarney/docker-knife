@@ -15,6 +15,5 @@ env:
   - BASE=ruby VERSION=17
   - BASE=ruby VERSION=latest
 
-
 script:
   - ./build.sh

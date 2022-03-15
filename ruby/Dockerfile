@@ -2,7 +2,7 @@ FROM ruby:slim
 
 ARG VERSION
 ARG GEM
-ENV BUILDDEPS="libgmp3-dev gcc make"
+ENV BUILDDEPS="libgmp3-dev gcc make vim"
 
 RUN mkdir -p /knife
 WORKDIR /knife

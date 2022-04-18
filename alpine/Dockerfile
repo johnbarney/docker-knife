@@ -10,6 +10,7 @@ VOLUME /knife
 RUN set -ex                         \
  && apk upgrade                     \
  && apk add --no-cache ${BUILDDEPS} \
+ && apk add --no-cache vim          \
  && gem install ${GEM} ${VERSION}   \
  && apk del ${BUILDDEPS}
 

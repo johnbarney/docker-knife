@@ -2,16 +2,14 @@ FROM ruby:alpine
 
 ARG VERSION
 ARG GEM
-ENV BUILDDEPS="build-base"
 
 RUN mkdir -p /knife
 WORKDIR /knife
 VOLUME /knife
-RUN apk upgrade                     \
- && apk add --no-cache ${BUILDDEPS} \
- && apk add --no-cache vim          \
- && gem install ${GEM} ${VERSION}   \
- && apk del ${BUILDDEPS}
+RUN apk upgrade                       \
+ && apk add --no-cache vim build-base \
+ && gem install ${GEM} ${VERSION}     \
+ && apk del build-base
 
 ENTRYPOINT ["knife"]
 CMD ["--help"]

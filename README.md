@@ -1,4 +1,6 @@
-## Docker-Knife [![Build Status](https://travis-ci.com/johnbarney/docker-knife.svg?branch=master)](https://travis-ci.com/johnbarney/docker-knife)
+## Docker-Knife 
+
+[![Build](https://github.com/johnbarney/docker-knife/actions/workflows/build-and-push.yml/badge.svg)](https://github.com/johnbarney/docker-knife/actions/workflows/build-and-push.yml)
 
 [Docker Hub](https://hub.docker.com/r/johnbarney/docker-knife/)
 

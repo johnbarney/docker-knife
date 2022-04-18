@@ -14,35 +14,35 @@ jobs:
       matrix:
        include:
          - base: alpine
-           gem: chef --version ~>
-           version: 15
+           gem: chef
+           version: --version ~>15
            tag: alpine-15
          - base: alpine
-           gem: chef --version ~>
-           version: 16
+           gem: chef
+           version: --version ~>16
            tag: alpine-16
          - base: alpine
-           gem: knife --version ~>
-           version: 17
+           gem: knife
+           version: --version ~>17
            tag: alpine-17
          - base: alpine
            gem: knife
            version: ""
            tag: alpine-latest
          - base: ruby
-           gem: chef --version ~>
-           version: 15
+           gem: chef
+           version: --version ~>15
            tag: ruby-15
          - base: ruby
-           gem: chef --version ~>
-           version: 16
+           gem: chef
+           version: --version ~>16
            tag: ruby-16
          - base: ruby
-           gem: knife --version ~>
-           version: 17
+           gem: knife
+           version: --version ~>17
            tag: ruby-17
          - base: ruby
-           gem: knife --version ~>
+           gem: knife
            version: ""
            tag: latest
 

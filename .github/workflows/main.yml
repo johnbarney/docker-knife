@@ -16,27 +16,35 @@ jobs:
          - base: alpine
            gem: chef
            version: 15
+           tag: alpine-15
          - base: alpine
            gem: chef
            version: 16
+           tag: alpine-16
          - base: alpine
            gem: knife
            version: 17
+           tag: alpine-17
          - base: alpine
-           gem: knife 
-           version: latest
+           gem: knife
+           version: ""
+           tag: alpine-latest
          - base: ruby
            gem: chef
            version: 15
+           tag: ruby-15
          - base: ruby
            gem: chef
            version: 16
+           tag: ruby-16
          - base: ruby
            gem: knife
            version: 17
+           tag: ruby-17
          - base: ruby
            gem: knife
-           version: latest
+           version: ""
+           tag: latest
 
     steps:
     - name: Checkout
@@ -55,5 +63,5 @@ jobs:
       with:
         context: ${{ matrix.base }}/.
         push: true
-        tags: user/app:latest
-        build-args: VERSION=${{ matrix.version }} GEM=${{ matrix.gem }}
+        tags: johnbarney/knife:${{ matrix.tag }}
+        build-args: VERSION="${{ matrix.version }}" GEM=${{ matrix.gem }}

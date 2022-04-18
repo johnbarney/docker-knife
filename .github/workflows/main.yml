@@ -56,6 +56,4 @@ jobs:
         context: ${{ matrix.base }}/.
         push: true
         tags: user/app:latest
-        build-args: 
-          - VERSION=${{ matrix.version }}
-          - GEM=${{ matrix.gem }}
+        build-args: VERSION=${{ matrix.version }} GEM=${{ matrix.gem }}

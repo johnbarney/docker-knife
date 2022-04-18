@@ -7,8 +7,7 @@ ENV BUILDDEPS="libgmp3-dev gcc make"
 RUN mkdir -p /knife
 WORKDIR /knife
 VOLUME /knife
-RUN set -ex                                                 \
- && apt-get update                                          \
+RUN apt-get update                                          \
  && apt-get upgrade -y                                      \
  && apt-get install -y --no-install-recommends ${BUILDDEPS} \
  && apt-get install -y vim                                  \

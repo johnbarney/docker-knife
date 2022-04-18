@@ -7,8 +7,7 @@ ENV BUILDDEPS="build-base"
 RUN mkdir -p /knife
 WORKDIR /knife
 VOLUME /knife
-RUN set -ex                         \
- && apk upgrade                     \
+RUN apk upgrade                     \
  && apk add --no-cache ${BUILDDEPS} \
  && apk add --no-cache vim          \
  && gem install ${GEM} ${VERSION}   \

@@ -11,6 +11,7 @@ RUN set -ex                                                 \
  && apt-get update                                          \
  && apt-get upgrade -y                                      \
  && apt-get install -y --no-install-recommends ${BUILDDEPS} \
+ && apt-get install -y vim                                  \
  && rm -rf /var/lib/apt/lists/*                             \
  && gem install ${GEM} ${VERSION}                           \
  && apt-get purge -y --auto-remove ${BUILDDEPS}

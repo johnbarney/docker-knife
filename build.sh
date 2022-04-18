@@ -26,7 +26,7 @@ else
 fi
 
 # DockerHub Login
-echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+#echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 
 # Build container
 docker build --build-arg VERSION="${GEM_VERSION}" --build-arg GEM="${GEM}" -t "${DOCKER_IMAGE}":"${DOCKER_TAG}" .

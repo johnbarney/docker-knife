@@ -1,0 +1,37 @@
+name: Build and Push
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+       include:
+         - base: alpine
+           version: 15
+         - base: alpine
+           version: 16
+         - base: alpine
+           version: 17
+         - base: alpine
+           version: latest
+         - base: ruby
+           version: 15
+         - base: ruby
+           version: 16
+         - base: ruby
+           version: 17
+         - base: ruby
+           version: latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      env:
+        BASE: ${{ matrix.base }}
+        VERSION: ${{ matrix.version }}
+      run: ./build.sh
